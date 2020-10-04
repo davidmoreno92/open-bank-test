@@ -1,0 +1,11 @@
+@import '../../assets/scss/variables';
+
+.exceed {
+    div {
+        @include small {
+            display: block;
+        }
+    }
+
+
+}

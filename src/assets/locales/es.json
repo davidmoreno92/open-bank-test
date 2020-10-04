@@ -1,0 +1,54 @@
+{
+    "form": {
+        "product": {
+            "title": "Cuenta Corriente OpenClose",
+            "description": "Bienvenido a nuestro producto Cuenta Corriente OpenClose, nuestra cuenta corriente sin comisiones de apertura, mantenimiento o cancelación.",
+            "imagealt": "Guarda aquí todas tus contraseñas, datos o cualquier información, olvida las notas de papel y las aplicaciones no protegidas",
+            "image2alt": "Crea tu clave maestra: solo tú podrás acceder a tus secretos con ella.",
+            "section": {
+                "title": "Cómo funciona",
+                "description": "La Cuenta Corriente OpenClose es una cuenta corriente 100% digital no remunerada, con total liquidez, que lleva asociado un paquete de productos: Tarjeta Débito Zero y contrato multicanal que permite gestionar tus ingresos y pagos en cualquier momento y lugar."
+            },
+            "section-two": {
+                "title": "Ventajas",
+                "description": "<ul><li>Sin comisiones de apertura, mantenimiento o cancelación.</li><li>Sin comisiones en tus transferencias nacionales e internacionales (dentro de la UE), en euros.</li><li>Sin comisiones al retirar efectivo a débito en los más de 7.500 cajeros de Banco Santander en España con tu Tarjeta de Débito Open Debit, gratuita para el primer titular.</li></ul>"
+            },
+            "check-terms": "He leído y acepto los términos y condiciones"
+        },
+        "password": {
+            "title": "Crea tu Password Manager",
+            "description": "En primer lugar, debes crear una contraseña diferente para sus pertenencias electrónicas. No podrás recuperar tu contraseña, así que recúerdala bien.",
+            "input-password": "Crea tu contraseña maestra",
+            "password-placeholder": "Introduce tu contraseña",
+            "input-password-repeat": "Repite tu contraseña maestra",
+            "repeat-placeholder": "Repite tu contraseña",
+            "clue": {
+                "title": "También puedes crear una pista para que te ayude a recordar tu contraseña maestra.",
+                "input": "Crea tu pista para recordar tu contraseña (opcional)",
+                "placeholder": "Introduce tu pista"
+            },
+            "validation": {
+                "not-equal": "Las contraseñas no coinciden",
+                "required": "Ambos campos de contraseña son obligatorios",
+                "security-reason": "La contraseña no cumple los requisitos de seguridad. (Min 8 - Max 24) Al menos un número y una mayúscula.",
+                "maximum-length": "El máximo de caracteres para la pista es 255."
+            }
+        },
+        "feedback": {
+            "success": {
+                "title": "¡Tu Password Manager ya está creado!",
+                "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh.",
+                "button-text": "Acceder"
+            },
+            "failed": {
+                "title": "Ha habido un error",
+                "message": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas varius tortor nibh.",
+                "button-text": "Volver a Password Manager"
+            }
+        },
+        "buttons": {
+            "cancel": "Cancelar",
+            "next": "Siguiente"
+        }
+    }
+}

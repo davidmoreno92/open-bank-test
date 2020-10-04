@@ -1,0 +1,62 @@
+@import '../../assets/scss/variables';
+
+
+.buttons-box {
+    @include small {
+        margin: 0 auto;
+        padding: 2rem 6rem;
+        border-top: 1px solid #ccc;
+        margin-top: 2rem;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        font-weight: bold;
+        background-color: $blue-dark-color;
+        color: #fff;
+        padding: 0.5rem 1.5rem;
+        border: 0;
+        border-radius: 0.2rem;
+        text-transform: none;
+
+        &:hover {
+            //To override material hover
+            background-color: $blue-dark-color
+        }
+
+        &.transparent {
+            color: $blue-dark-color;
+            background-color: transparent;
+            border: 0;
+
+            &.pink {
+                color: $pink-color;
+
+                .arrow {
+                    border-color: $pink-color;
+                }
+            }
+        }
+
+        .arrow {
+            border: solid #fff;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            margin: 0.5rem;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+    }
+
+    .right {
+        margin-left: auto;
+    }
+
+}

@@ -1,0 +1,23 @@
+$blue-dark-color: #092b45;
+$blue-color: #788f9c;
+$pink-color: #df0849;
+$bg-color: #788f9c;
+$line-color: #40c3df;
+
+@mixin small {
+    @media only screen and (min-width: 600px) {
+        @content;
+    }
+}
+
+@mixin medium {
+    @media only screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin large {
+    @media only screen and (min-width: 1440px) {
+        @content;
+    }
+}

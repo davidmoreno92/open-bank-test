@@ -1,0 +1,178 @@
+@import '../../assets/scss/variables';
+
+.stepInfo,
+.stepPassword,
+.stepFeedback {
+    @include small {
+        max-width: 80%;
+    }
+
+    max-width: 90%;
+    margin: 0 auto;
+
+    .row {
+
+        h1 {
+            text-align: left;
+
+            hr {
+                width: 40px;
+                margin: 10px 2px;
+                height: 3px;
+                background-color: $line-color;
+                border: 0;
+            }
+        }
+
+        .info-img {
+            height: 165px;
+        }
+
+
+        ul {
+            padding-left: 1rem;
+
+            li {
+                padding: 0.5rem 0;
+            }
+        }
+
+        label {
+            font-weight: bold;
+            color: $blue-dark-color;
+            font-family: 'Quicksand', sans-serif;
+            margin-bottom: 0.5em;
+        }
+
+        &.images-row {
+            @include small {
+                display: flex;
+                flex-direction: row;
+            }
+
+            div {
+                flex-basis: 0;
+                flex: 1 1 0px;
+            }
+        }
+
+        &.password-row {
+            div {
+                margin: 0.5rem 0;
+            }
+
+            input {
+                padding: 1em;
+            }
+
+            @include small {
+                display: flex;
+                flex-direction: row;
+            }
+
+            div:last-child {
+                @include small {
+                    margin-right: 2.5em;
+                }
+            }
+        }
+
+        &.notification-row {
+            @include small {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            img {
+                margin-right: 2rem;
+            }
+        }
+
+        &.clue-row {
+            div {
+                margin: 0.5rem 0;
+
+                .text-counter {
+                    margin: 0;
+
+                    @include small {
+                        text-align: right;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+
+                    &.exceed {
+                        color: red;
+                    }
+                }
+
+                input {
+                    max-width: 80%;
+                }
+            }
+        }
+
+    }
+}
+
+.buttons-box {
+    @include small {
+        margin: 0 auto;
+        padding: 2rem 6rem;
+        border-top: 1px solid #ccc;
+        margin-top: 2rem;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+        font-weight: bold;
+        background-color: $blue-dark-color;
+        color: #fff;
+        padding: 0.5rem 1.5rem;
+        border: 0;
+        border-radius: 0.2rem;
+        text-transform: none;
+
+        &:hover {
+            //To override material hover
+            background-color: $blue-dark-color
+        }
+
+        &.transparent {
+            color: $blue-dark-color;
+            background-color: transparent;
+            border: 0;
+
+            &.pink {
+                color: $pink-color;
+
+                .arrow {
+                    border-color: $pink-color;
+                }
+            }
+        }
+
+        .arrow {
+            border: solid #fff;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 3px;
+            margin: 0.5rem;
+        }
+
+        .right {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+        }
+    }
+
+    .right {
+        margin-left: auto;
+    }
+
+}
