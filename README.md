@@ -18,8 +18,7 @@ npm run start
 npm run build
 ```
 
-> Launch tests
-There are not tests setted
+> Launch test (There are not tests setted)
 ```shell
 npm run test
 ```
