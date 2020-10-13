@@ -39,7 +39,7 @@ export const sendForm = (formData) => {
 
 export const sendFormData = async (dispatch, formData) => {
     dispatch({ type: SEND_FORM });
-    await (submitForm(formData.password, formData.passwordRepeat, formData.clue)).then(data => {
+    submitForm(formData.password, formData.passwordRepeat, formData.clue).then(data => {
         dispatch({ type: SEND_FORM_RESPONSE, payload: data });
     }).catch(e => {
         let data = {};

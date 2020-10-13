@@ -60,7 +60,7 @@ class FormProduct extends Component {
                         {t('form.product.check-terms')}
                     </div>
                 </div>
-                <FormButtons next={2} disableNext={!agree} />
+                <FormButtons next={1} disableNext={!agree} />
             </div>
         )
     }

@@ -119,7 +119,7 @@ class FormPassword extends Component {
                         </div>
                     </form>
                 </div>
-                <FormButtons prev={1} next={3} disableNext={!validatedPassword || clue.length > 255} />
+                <FormButtons prev={0} next={2} disableNext={!validatedPassword || clue.length > 255} />
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import { SET_STEP, UPDATE_FORM, RESET_FORM, SEND_FORM, SEND_FORM_RESPONSE } from '../actions/FormAction'
 
 const initialState = {
-    step: 1,
+    step: 0,
     agree: false,
     password: '',
     passwordRepeat: '',

@@ -12,9 +12,9 @@ const steps = ["FormProduct", "FormPassword", "FormFeedback"];
 class FormPage extends Component {
     renderForm = (step) => {
         switch (step) {
-            case 1: return <FormProduct />
-            case 2: return <FormPassword />
-            case 3: return <FormFeedback />
+            case 0: return <FormProduct />
+            case 1: return <FormPassword />
+            case 2: return <FormFeedback />
             default:
                 return <FormProduct />
         }
