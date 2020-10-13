@@ -1,15 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 import CircularProgress from '@material-ui/core/CircularProgress'
 
 import './Loader.scss';
 
-export default class Loader extends Component {
-    
-    render() {
-        return (
-            <div className="loader">
-                <CircularProgress />
-            </div>
-        )
-    }
+function Loader() {
+    return (
+        <div className="loader">
+            <CircularProgress />
+        </div>
+    )
 }
+
+export default Loader;

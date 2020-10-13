@@ -8,7 +8,7 @@ import { createBrowserHistory } from "history";
 import configureStore from './store/configureStore'
 
 import App from './App'
-import FormPage from './components/pages/FormPage'
+import FormPage from './pages/FormPage'
 import './i18n';
 
 const store = configureStore()

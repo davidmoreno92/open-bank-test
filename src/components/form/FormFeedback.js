@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import { connect } from 'react-redux'
 import { withTranslation } from 'react-i18next'
 
@@ -8,37 +8,38 @@ import ResponseBoxButtons from '../responseBox/ResponseBoxButtons'
 import Loader from '../loader/Loader'
 import './Form.scss';
 
-class FormFeedback extends Component {
+function FormFeedback(props) {
+    const { isSending, responseData, responseOK, t, clickHandler, sendFormData, password, passwordRepeat, clue} = props;
+    const isOk = responseData.status === responseOK;
+    
+    const imgPath = isOk ? "/images/success-icon.jpg" : "/images/error-icon.jpg";
+    const title = isOk ? t('form.feedback.success.title') : t('form.feedback.failed.title');
+    const message = isOk ? t('form.feedback.success.message') : t('form.feedback.failed.message');
+    const buttonMessage = isOk ? t('form.feedback.success.button-text') : t('form.feedback.failed.button-text');
+    const buttonPath = isOk ? "/" : "";
 
-    async componentDidMount() {
-        await this.props.sendFormData({ password: this.props.password, passwordRepeat: this.props.passwordRepeat, clue: this.props.clue });
-    }
+    useEffect(() => {
+        async function fetchData() {
+            await sendFormData({ password: password, passwordRepeat: passwordRepeat, clue: clue });
+        }
+        fetchData();
+    }, [sendFormData, password, passwordRepeat, clue])
 
-    render() {
-        const { isSending, responseData, responseOK, t } = this.props;
-        const isOk = responseData.status === responseOK;
+    return (
+        <div>
+            {!isSending && responseData ?
+                <>
+                    <div className="stepFeedback">
+                        <ResponseBox className="notification-row" imgPath={imgPath} title={title} message={message} />
+                    </div>
+                    <ResponseBoxButtons onClick={clickHandler} message={buttonMessage} path={buttonPath} />
+                </>
+                :
+                <Loader />
+            }
+        </div>
+    )
 
-        const imgPath = isOk ? "/images/success-icon.jpg" : "/images/error-icon.jpg";
-        const title = isOk ? t('form.feedback.success.title') : t('form.feedback.failed.title');
-        const message = isOk ? t('form.feedback.success.message'): t('form.feedback.failed.message');
-        const buttonMessage = isOk ? t('form.feedback.success.button-text') : t('form.feedback.failed.button-text');
-        const buttonPath = isOk ? "/" : "";
-
-        return (
-            <div>
-                {!isSending && responseData ?
-                    <>
-                        <div className="stepFeedback">
-                            <ResponseBox className="notification-row" imgPath={imgPath} title={title} message={message} />
-                        </div>
-                        <ResponseBoxButtons onClick={this.clickHandler} message={buttonMessage} path={buttonPath} />
-                    </>
-                    :
-                    <Loader />
-                }
-            </div>
-        )
-    }
 }
 
 const mapStateToProps = (state) => ({
