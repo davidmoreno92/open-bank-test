@@ -5,7 +5,8 @@ import FormProduct from '../form/FormProduct'
 import FormPassword from '../form/FormPassword'
 import FormFeedback from '../form/FormFeedback'
 
-import Stepper from '../stepper/Stepper'
+import Stepper from '../stepper/Stepper';
+
 
 const steps = ["FormProduct", "FormPassword", "FormFeedback"];
 
