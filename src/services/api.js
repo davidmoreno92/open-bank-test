@@ -13,5 +13,7 @@ const submitForm = (pass, repass, optionalQuestion) =>
 )
 
 export {
-	submitForm
+	submitForm,
+	RESPONSE_KO,
+	RESPONSE_OK
 }

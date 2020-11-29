@@ -12,7 +12,7 @@ function ResponseBoxButtons(props) {
     return (
         <Box className="buttons-box">
             <Box className="right">
-                <Button onClick={() => props.resetForm()} className="transparent pink">
+                <Button onClick={() => resetForm()} className="transparent pink">
                     {message ? message : 'Volver a Password Manager'}
                     <i className="arrow right" />
                 </Button>
@@ -21,14 +21,5 @@ function ResponseBoxButtons(props) {
     )
 }
 
-const mapStateToProps = (state) => ({
 
-})
-
-const mapDispatchToProps = (dispatch) => ({
-    resetForm: () => dispatch(resetForm())
-})
-
-
-
-export default connect(mapStateToProps, mapDispatchToProps)(ResponseBoxButtons)
+export default ResponseBoxButtons

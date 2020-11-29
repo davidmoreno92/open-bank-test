@@ -1,19 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Checkbox } from '@material-ui/core'
-import { connect } from 'react-redux'
 import Box from '@material-ui/core/Box'
 import { withTranslation } from 'react-i18next'
 
 import FormButtons from './FormButtons'
-import { updateForm } from '../../actions/FormAction'
 import './Form.scss';
 
 
 function FormProduct(props) {
-    const { agree, t } = props;
+    const { t } = props;
+    const [agree, setAgree] = useState(false);
 
-    const handleOnCheck = (event, isInputChecked) => {
-        props.updateForm("agree", isInputChecked)
+    const handleOnCheck = () => {
+        setAgree(!agree);
     }
 
     return (
@@ -64,12 +63,4 @@ function FormProduct(props) {
     )
 }
 
-const mapStateToProps = (state) => ({
-    agree: state.FormReducer.agree
-})
-
-const mapDispatchToProps = (dispatch) => ({
-    updateForm: (field, value) => dispatch(updateForm(field, value)),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(withTranslation()(FormProduct));
+export default (withTranslation()(FormProduct));

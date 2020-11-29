@@ -3,15 +3,8 @@ import { SET_STEP, UPDATE_FORM, RESET_FORM, SEND_FORM, SEND_FORM_RESPONSE } from
 const initialState = {
     step: 0,
     agree: false,
-    password: '',
-    passwordRepeat: '',
-    showPassword: true,
-    validatedPassword: false,
-    clue: '',
     isSending: false,
-    responseData: {},
-    responseOK: 200,
-    responseKO: 401
+    responseData: {}
 }
 
 const FormReducer = (state = initialState, action) => {

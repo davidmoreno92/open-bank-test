@@ -6,12 +6,13 @@ import { sendFormData } from '../../actions/FormAction'
 import ResponseBox from '../responseBox/ResponseBox'
 import ResponseBoxButtons from '../responseBox/ResponseBoxButtons'
 import Loader from '../loader/Loader'
-import './Form.scss';
+import { RESPONSE_OK } from '../../services/api'
+import './Form.scss'
 
 function FormFeedback(props) {
-    const { isSending, responseData, responseOK, t, clickHandler, sendFormData, password, passwordRepeat, clue} = props;
-    const isOk = responseData.status === responseOK;
-    
+    const { isSending, responseData, t, clickHandler, sendFormData, password, passwordRepeat, clue } = props;
+    const isOk = responseData.status === RESPONSE_OK;
+
     const imgPath = isOk ? "/images/success-icon.jpg" : "/images/error-icon.jpg";
     const title = isOk ? t('form.feedback.success.title') : t('form.feedback.failed.title');
     const message = isOk ? t('form.feedback.success.message') : t('form.feedback.failed.message');
@@ -47,8 +48,7 @@ const mapStateToProps = (state) => ({
     responseData: state.FormReducer.responseData,
     password: state.FormReducer.password,
     passwordRepeat: state.FormReducer.passwordRepeat,
-    clue: state.FormReducer.clue,
-    responseOK: state.FormReducer.responseOK
+    clue: state.FormReducer.clue
 })
 
 const mapDispatchToProps = (dispatch) => ({
